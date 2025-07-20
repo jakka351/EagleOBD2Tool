@@ -1,9 +1,7 @@
 <img width="873" height="587" alt="your_logo" src="https://github.com/user-attachments/assets/d845b5bc-f058-494c-9353-514f8a6b2a30" />
 
 # Eagle OBD2 Tool
-An OBD2 Tool created in MAUI for use with an ELM327 interface.
-
-***
+An OBD2 Tool created in MAUI for use with an ELM327 interface. Available for purchase from https://testerpresent.com.au/ 
 
 # Software Images
 <img width="1432" height="762" alt="image" src="https://github.com/user-attachments/assets/3575342a-5ad1-4d7b-b84f-1aabddb4ab74" />
