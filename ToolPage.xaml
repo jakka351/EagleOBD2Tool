@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Eagle.ToolPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="OBD-II Tools"
+    BackgroundColor="LightGray">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <!-- A Label with x:Name="StatusLabel" -->
+        <Label 
+            x:Name="StatusLabel"
+            Text="Status messages will appear here."
+            HorizontalOptions="Center"
+            TextColor="Black"
+            FontSize="14" />
+
+        <!-- Buttons for OBD-II tasks -->
+        <Button Text="Read DTC"
+                Clicked="OnReadDtcClicked"
+                BackgroundColor="#4CAF50"
+                TextColor="White"/>
+
+        <Button Text="Clear DTC"
+                Clicked="OnClearDtcClicked"
+                BackgroundColor="#F44336"
+                TextColor="White"/>
+
+        <Button Text="Read VIN"
+                Clicked="OnReadVinClicked"
+                BackgroundColor="#1976D2"
+                TextColor="White"/>
+
+        <Button Text="Read Odometer"
+                Clicked="OnReadOdometerClicked"
+                BackgroundColor="#1976D2"
+                TextColor="White"/>
+
+        <Button Text="Read Calibration"
+                Clicked="OnReadCalibrationClicked"
+                BackgroundColor="#1976D2"
+                TextColor="White"/>
+
+        <Button Text="Read ECU Name"
+                Clicked="OnReadEcuNameClicked"
+                BackgroundColor="#1976D2"
+                TextColor="White"/>
+
+        <!-- An Editor with x:Name="OutputEditor" for showing results -->
+        <Editor 
+            x:Name="OutputEditor"
+            Placeholder="Command output will appear here..."
+            AutoSize="TextChanges"
+            BackgroundColor="White"
+            TextColor="Black"
+            HeightRequest="150" />
+    </VerticalStackLayout>
+</ContentPage>

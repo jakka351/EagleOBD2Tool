@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Eagle.MainPage"
+    Background="Transparent">
+
+    <ContentPage.Background>
+        <!-- A simple vertical gradient background -->
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStop Color="#0D47A1" Offset="0.0"/>
+            <GradientStop Color="#1976D2" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <Grid>
+        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="20">
+            <!-- Replace "your_logo.png" with the actual image in your project's Resources/Images folder -->
+            <Image Source="your_logo.png" HeightRequest="400" WidthRequest="400"/>
+
+            <ActivityIndicator IsRunning="True" Color="White"/>
+            
+            <Label Text="Welcome to Eagle OBDII Tool"
+                   TextColor="White"
+                   FontSize="28"
+                   HorizontalOptions="Center"/>
+            
+            
+            
+            <Label Text="Developed by Tester Present Specialist Automotive Solutions"
+                   TextColor="White"
+                   Opacity="0.8"
+                   FontSize="16"
+                   HorizontalOptions="Center"/>
+
+           
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

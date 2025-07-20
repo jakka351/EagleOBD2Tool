@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Eagle.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Background="Transparent">
+
+    <ContentPage.Background>
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStop Offset="0.0" Color="#0D47A1" />
+            <GradientStop Offset="1.0" Color="#1976D2" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout
+        Padding="20"
+        HorizontalOptions="Center"
+        Spacing="20"
+        VerticalOptions="Center">
+        <Image
+            HeightRequest="250"
+            Source="your_logo.png"
+            WidthRequest="250" />
+
+        <Label
+            FontSize="22"
+            HorizontalOptions="Center"
+            Text="Scan for ELM327 Interfaces"
+            TextColor="White" />
+
+        <Button
+            x:Name="ScanButton"
+            BackgroundColor="#1976D2"
+            Clicked="OnScanClicked"
+            HorizontalOptions="Center"
+            Text="Scan for Devices"
+            TextColor="White" />
+
+        <!--  ✅ COMBOBOX REPLACEMENT  -->
+        <Picker
+            x:Name="DevicePicker"
+            Title="Select a COM Port"
+            BackgroundColor="White"
+            ItemsSource="{Binding ComPorts}"
+            SelectedIndexChanged="DevicePicker_SelectedIndexChanged"
+            TextColor="Black"
+            WidthRequest="300" />
+
+        <Button
+            x:Name="ConnectButton"
+            BackgroundColor="#0D47A1"
+            Clicked="OnConnectClicked"
+            HorizontalOptions="Center"
+            IsEnabled="False"
+            Text="Connect"
+            TextColor="White" />
+
+        <ActivityIndicator
+            x:Name="ActivityIndicator"
+            IsRunning="False"
+            Color="White" />
+
+        <Label
+            x:Name="StatusLabel"
+            FontSize="14"
+            HorizontalOptions="Center"
+            Text=""
+            TextColor="White" />
+    </VerticalStackLayout>
+</ContentPage>

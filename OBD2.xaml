@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Eagle.OBD2"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:Eagle.Views"
+    Title="Eagle OBDII by Tester Present Specialist Automotive Solutions"
+    Background="Transparent">
+
+    <!--  Gradient Background: Dark Blue (top) to Light Blue (bottom)  -->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Offset="0.0" Color="#0D47A1" />
+            <!--  Dark Blue  -->
+            <GradientStop Offset="0.5" Color="#1976D2" />
+            <!--  Mid Blue  -->
+            <GradientStop Offset="1.0" Color="#BBDEFB" />
+            <!--  Light Blue  -->
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <Grid
+        Padding="20"
+        ColumnDefinitions="1.5*, 3*"
+        RowSpacing="20">
+
+        <!--  Left Menu Panel  -->
+        <Frame
+            Grid.Column="0"
+            Padding="20"
+            BackgroundColor="#0F2A55"
+            BorderColor="#FFFFFF50"
+            CornerRadius="20"
+            HasShadow="False">
+
+            <VerticalStackLayout
+                HorizontalOptions="Center"
+                Spacing="20"
+                VerticalOptions="Center">
+
+                <!--  Logo Placeholder  -->
+                <Image
+                    Margin="0,0,0,10"
+                    Aspect="AspectFit"
+                    HeightRequest="100"
+                    Source="your_logo.png" />
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="22"
+                    HorizontalOptions="Center"
+                    Text="OBDII Functions"
+                    TextColor="White" />
+
+                <!--  Unified Themed Buttons  -->
+                <Button
+                    BackgroundColor="#0D47A1"
+                    Clicked="OnReadDTCClicked"
+                    CornerRadius="10"
+                    HorizontalOptions="Center"
+                    Text="Read Fault Codes"
+                    TextColor="White"
+                    WidthRequest="180" />
+
+                <Button
+                    BackgroundColor="#0D47A1"
+                    Clicked="OnClearDTCClicked"
+                    CornerRadius="10"
+                    HorizontalOptions="Center"
+                    Text="Clear Fault Codes"
+                    TextColor="White"
+                    WidthRequest="180" />
+
+                <Button
+                    BackgroundColor="#0D47A1"
+                    Clicked="OnCheckVinClicked"
+                    CornerRadius="10"
+                    HorizontalOptions="Center"
+                    Text="Vehicle Data"
+                    TextColor="White"
+                    WidthRequest="180" />
+
+                <Button
+                    BackgroundColor="#0D47A1"
+                    Clicked="OnCheckMonitorsClicked"
+                    CornerRadius="10"
+                    HorizontalOptions="Center"
+                    Text="Check Monitors"
+                    TextColor="White"
+                    WidthRequest="180" />
+
+                <Button
+                    BackgroundColor="#0D47A1"
+                    Clicked="OnDisplayPidClicked"
+                    CornerRadius="10"
+                    HorizontalOptions="Center"
+                    Text="Display PID Data"
+                    TextColor="White"
+                    WidthRequest="180" />
+
+                <Button
+                    BackgroundColor="#0D47A1"
+                    Clicked="OnFreezeFrameClicked"
+                    CornerRadius="10"
+                    HorizontalOptions="Center"
+                    Text="Display Freeze Frame"
+                    TextColor="White"
+                    WidthRequest="180" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <!--  Right Dynamic Content Display  -->
+        <Frame
+            Grid.Column="1"
+            Padding="10"
+            BackgroundColor="White"
+            BorderColor="#FFFFFF80"
+            CornerRadius="20"
+            HasShadow="True">
+            <ContentView x:Name="ContentContainer" BackgroundColor="Transparent" />
+        </Frame>
+    </Grid>
+</ContentPage>
