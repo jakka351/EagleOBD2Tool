@@ -1,0 +1,54 @@
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eagle.Views.MonitorStatusView"
+             BackgroundColor="Transparent">
+
+    <VerticalStackLayout Padding="15" Spacing="15">
+        <Label Text="Emissions Monitor Status"
+               FontSize="22"
+               FontAttributes="Bold"
+               TextColor="#0D47A1"
+               HorizontalOptions="Center" />
+
+        <Label x:Name="ResponseLabel"
+               FontSize="16"
+               TextColor="Black"
+               HorizontalOptions="Center"
+               Text="Monitor status will appear here" />
+
+        <Frame BackgroundColor="White"
+               CornerRadius="10"
+               Padding="10"
+               BorderColor="#cccccc"
+               HasShadow="True">
+            <CollectionView x:Name="MonitorCollectionView"
+                            BackgroundColor="Transparent">
+                <CollectionView.Header>
+                    <Grid ColumnDefinitions="2*, 1*"
+                          BackgroundColor="#1A237E"
+                          Padding="6">
+                        <Label Text="Monitor"
+                               TextColor="White"
+                               FontAttributes="Bold" />
+                        <Label Text="Status"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="End" />
+                    </Grid>
+                </CollectionView.Header>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="5"
+                              ColumnDefinitions="2*, 1*">
+                            <Label Text="{Binding MonitorName}" TextColor="Black"/>
+                            <Label Text="{Binding Status}"
+                                   TextColor="{Binding StatusColor}"
+                                   HorizontalTextAlignment="End" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Frame>
+    </VerticalStackLayout>
+</ContentView>

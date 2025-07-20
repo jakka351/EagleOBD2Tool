@@ -1,0 +1,43 @@
+<ContentView
+    x:Class="Eagle.Views.VinView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="Transparent">
+
+    <VerticalStackLayout Padding="25" Spacing="20">
+        <Label
+            Text="Vehicle Identification Summary"
+            FontSize="24"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            TextColor="#0D47A1" />
+
+        <Frame BackgroundColor="White"
+               BorderColor="#cccccc"
+               CornerRadius="12"
+               HasShadow="True"
+               Padding="20">
+
+            <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="Auto, *" RowSpacing="12">
+                <Label Text="VIN:" FontAttributes="Bold" TextColor="Black" />
+                <Label x:Name="VinLabel" Text="--" TextColor="Black" />
+
+                <Label Grid.Row="1" Text="Calibration ID:" FontAttributes="Bold" TextColor="Black" />
+                <Label x:Name="CalibrationLabel" Grid.Row="1" Text="--" TextColor="Black" />
+
+                <Label Grid.Row="2" Text="Strategy ID:" FontAttributes="Bold" TextColor="Black" />
+                <Label x:Name="StrategyLabel" Grid.Row="2" Text="--" TextColor="Black" />
+            </Grid>
+        </Frame>
+
+        <Button
+            x:Name="ReadVehicleDataButton"
+            Text="Read Vehicle Data"
+            BackgroundColor="#0D47A1"
+            TextColor="White"
+            CornerRadius="10"
+            WidthRequest="200"
+            HorizontalOptions="Center"
+            Clicked="OnReadVehicleDataClicked" />
+    </VerticalStackLayout>
+</ContentView>

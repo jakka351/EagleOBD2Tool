@@ -1,0 +1,37 @@
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eagle.Views.DtcView"
+             BackgroundColor="Transparent">
+    <VerticalStackLayout>
+        <Label Text="Diagnostic Trouble Codes"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="#0D47A1"
+               Margin="0,10,0,10"/>
+
+        <CollectionView x:Name="DtcCollectionView"
+                        SelectionMode="None"
+                        BackgroundColor="White">
+            <CollectionView.Header>
+                <Grid Padding="5"
+                      BackgroundColor="#EEEEEE"
+                      ColumnDefinitions="1*, 3*">
+                    <Label Text="Code"
+                           FontAttributes="Bold"/>
+                    <Label Text="Description"
+                           FontAttributes="Bold"/>
+                </Grid>
+            </CollectionView.Header>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="5"
+                          ColumnDefinitions="1*, 3*">
+                        <Label Text="{Binding Code}" />
+                        <Label Text="{Binding Description}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentView>
