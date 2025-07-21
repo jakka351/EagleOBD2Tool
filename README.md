@@ -1,7 +1,12 @@
 <img width="873" height="587" alt="your_logo" src="https://github.com/user-attachments/assets/d845b5bc-f058-494c-9353-514f8a6b2a30" />
 
 # Eagle OBD2 Tool
-An OBD2 Tool created in MAUI for use with an ELM327 interface. Available for purchase from https://testerpresent.com.au/ 
+Power of the Eagle
+If you're someone who works on your own car, tunes vehicles, or just wants deeper access to your vehicle's brain, Eagle OBDII Tool is your new best friend.
+
+Built in .NET MAUI and designed for speed, simplicity, and full protocol coverage, this tool works directly with your ELM327 interface — whether you're reading fault codes in the driveway or streaming live engine data in real time.
+
+Grab it now at https://testerpresent.com.au
 
 # Features
 ✅ Read DTCs (Diagnostic Trouble Codes)
