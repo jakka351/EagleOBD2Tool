@@ -36,4 +36,17 @@ Run basic fuel system diagnostics (where supported).
 <img width="1431" height="760" alt="image" src="https://github.com/user-attachments/assets/a676f483-da81-41e2-8d4b-a71f430fa3b7" />
 <img width="1434" height="760" alt="image" src="https://github.com/user-attachments/assets/0efae8c1-f78c-4691-be4c-165436906972" />
 
+# Supported OBD-II Protocols
+It supports all standard OBD-II protocols via ELM327:
 
+ISO 15765-4 (CAN) – Used on most modern vehicles (post-2008)
+
+ISO 9141-2 – Common on older Chryslers, Toyotas, etc.
+
+ISO 14230-4 (KWP2000) – Popular with some European and Asian makes
+
+SAE J1850 PWM – Mostly Ford
+
+SAE J1850 VPW – Mostly GM
+
+If your ELM327 adapter supports it, Eagle talks it.
