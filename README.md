@@ -3,6 +3,33 @@
 # Eagle OBD2 Tool
 An OBD2 Tool created in MAUI for use with an ELM327 interface. Available for purchase from https://testerpresent.com.au/ 
 
+# Features
+✅ Read DTCs (Diagnostic Trouble Codes)
+Pull stored, pending, and permanent codes. Know exactly why your check engine light is on.
+
+✅ Clear DTCs
+One click to wipe codes and turn off that dash light.
+
+✅ Live Data (Mode $01)
+Real-time engine stats like RPM, coolant temp, fuel trims, throttle position, O2 sensors, etc. View in charts or raw hex if you're a real nerd.
+
+✅ Freeze Frame
+View a snapshot of sensor values from the moment a fault was logged. Super helpful for diagnosing intermittent problems.
+
+✅ Emissions Monitor Status
+Check if your vehicle is ready for a roadworthy or emissions test. See which monitors have passed, failed, or are incomplete.
+
+✅ Vehicle Information (Mode $09)
+Pull VIN, calibration IDs, ECU name and software version.
+
+✅ O2 Sensor Tests
+Run oxygen sensor diagnostics to see if your sensors and catalysts are behaving.
+
+✅ Onboard Monitoring (Mode $06)
+Access raw test results from the ECU — like misfire counters and sensor-specific diagnostics.
+
+✅ Fuel System Tests (Mode $08)
+Run basic fuel system diagnostics (where supported).
 # Software Images
 <img width="1432" height="762" alt="image" src="https://github.com/user-attachments/assets/3575342a-5ad1-4d7b-b84f-1aabddb4ab74" />
 <img width="1433" height="763" alt="image" src="https://github.com/user-attachments/assets/639738f6-2bd2-4cc7-bd72-aa373b16a53d" />
